@@ -1,0 +1,176 @@
+@import '../reset.css';
+@import '../navbar_ajust.css';
+@import '../navbar.css';
+@import '../scrollingUp.css';
+@import '../spiningLoader.css';
+@import '../modal.css';
+@import '../fadeInUp.css';
+@import '../footer.css';
+
+/* Events-Posts Section CSS Code */
+
+/* ---------------------- Events-Posts Start ---------------------- */
+.main-section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/* background: #f4f4f4; */
+}
+.landing-block{
+	background: url("../../img/school-pic.jpg") #b2ddf8 no-repeat;
+	background-size: cover;
+	color: #fefefe;
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0 50px;
+}
+.landing-block::before{
+	content: "";
+    background: rgba(0, 0, 0, .3);
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	z-index: 1;
+    top: 0;
+    left: 0;
+}
+.landing-block h1{
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	font-size: 28px;
+	max-width: 800px;
+	padding: 1.5rem 12vw;
+	border-radius: .25rem;
+	font-weight: 900;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: .45mm;
+	animation: fadeInUp 2s cubic-bezier(.55, .09, 0, .74);
+}
+.load-container{
+	margin: 100px auto;
+	text-align: center;
+}
+.spining-loader{
+	width: 80px;
+	height: 80px;
+	border: 10px solid #f3f3f3;
+	/* border-top: 32px solid green;
+	border-right: 32px solid yellow;
+	border-bottom: 32px solid blue; */
+	border-top: 10px solid green;
+	border-right: 10px solid yellow;
+	border-bottom: 10px solid #006d86;
+	margin: 0 auto 20px;
+	border-radius: 50%;
+	animation: spining 2s linear infinite;
+}
+.failure-icon{
+	width: 10px;
+	height: 85px;
+	margin: 0 auto 20px;
+	background: red;
+	transform: rotate(42deg);
+}
+.failure-icon::after{
+	content: "";
+	position: relative;
+	display: block;
+	width: inherit;
+	height: inherit;
+	margin: inherit;
+	background: inherit;
+	transform: rotate(-86deg);
+}
+.post-section{
+	width: 100%;
+	padding: 4rem 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 320px);
+	justify-content: center;
+	gap: 4rem;
+}
+.post-item{
+	width: 100%;
+	border-radius: .25rem;
+}
+.city{
+	font-size: 12.758px;
+	font-weight: 600;
+	padding-bottom: .825rem;
+	line-height: .79956rem;
+	text-align: center;
+	color: #70af8f;
+	text-transform: uppercase;
+}
+.imgDate{
+	position: relative;
+}
+.imgCover{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: .25rem;
+}
+.date{
+	text-transform: uppercase;
+    position: absolute;
+    padding: .3em 1em .5em;
+    background-color: #006d86;
+    font-weight: 600;
+    bottom: 10.756%;
+}
+.day, .month, .year{
+    font-size: 1.0625rem;
+    color: #f5f6f3;
+    text-align: center;
+	line-height: 1.3em;
+	text-transform: uppercase;
+}
+.titlePost{
+	font-size: 1.2rem;
+	line-height: 1.6em;
+	font-weight: 600;
+	color: #006d86;
+	padding-top: .825rem;
+}
+.postDescription{
+	line-height: 1.5;
+	font-weight: 300;
+	margin-top: .625rem;
+}
+.mt-mb{
+	margin: 1.5rem 0;
+}
+/* ---------------------- Events-Posts End ---------------------- */
+
+
+
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
+@media screen and (max-width:960px) {
+	.landing-block, .landing-block::before{
+		height: 200px;
+	}
+}
+@media screen and (max-width:402px){
+	.landing-block h1{
+		padding: .5rem 0;
+		font-size: 23px;
+	}
+	.post-section{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.day, .month, .year{
+		font-size: .825rem;
+	}
+}
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/

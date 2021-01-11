@@ -1,0 +1,186 @@
+@import '../reset.css';
+@import '../navbar_ajust.css';
+@import '../navbar.css';
+@import '../scrollingUp.css';
+@import '../fadeInUp.css';
+@import '../footer.css';
+
+/* Formations Section CSS Code */
+
+/* ---------------------- Landing Formations Block Start ---------------------- */
+.main-section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.landing-block{
+	background: url("../../img/bde.jpg") #b2ddf8 no-repeat;
+	background-size: cover;
+	background-position: 30% 22%;
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0 50px;
+}
+.landing-block::before{
+	content: "";
+    background: rgba(0, 0, 0, .3);
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	z-index: 1;
+    top: 0;
+    left: 0;
+}
+.landing-block h1{
+	position: relative;
+	z-index: 3;
+	text-align: center;
+	font-size: 28px;
+	color: #fff;
+	max-width: 800px;
+	padding: 1.5rem 12vw;
+	border-radius: .25rem;
+	font-weight: 900;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: .45mm;
+	animation: fadeInUp 2s cubic-bezier(.55, .09, 0, .74);
+}
+.sommaire{
+	height: 100%;
+	padding: 3rem 6vw 1.5rem;
+	background: #f1f1f1;
+}
+.sommaire h2{
+	text-transform: capitalize;
+	font-size: 30px;
+	color: #03617e;
+}
+.sommaire__text{
+	max-width: 640px;
+	padding: 25px 0;
+}
+.sommaire__text p{
+	line-height: 2;
+}
+.sommaire__text p:nth-child(2){
+	padding: 15px 0;
+}
+.container{
+	background: url("../../img/alexis-brown-omeaHbEFlN4-unsplash.jpg") hsl(35, 60%, 31%) no-repeat;
+	background-size: cover;
+	background-position: 60% -20%;
+	background-attachment: fixed;
+	max-width: 100%;
+	padding: 20px 6vw;
+	color: #fff;
+}
+.container h2{
+	font-size: 38px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	padding: 2rem 0 20px;
+}
+.container h2::before{
+	content: "";
+	display: block;
+	width: 135px;
+	height: 2px;
+	position: relative;
+	top: -3px;
+	background: #76cca0;
+}
+.container h2::after{
+	content: "";
+	display: block;
+	position: relative;
+	width: 135px;
+	height: 2px;
+	top: 3px;
+	background: #76cca0;
+}
+.content{
+	padding: 20px 0;
+}
+.content ul{
+	padding: 0 50px 10px;
+}
+.content ul li{
+	list-style-type: square;
+}
+.invit{
+	padding: 4rem 5px 5rem;
+	background: #f1f1f1;
+	color: #03617e;
+	text-align: center;
+}
+.invit cite{
+	font-size: 35px;
+}
+.invit h2{
+	font-size: 38px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	padding-top: 4rem;
+}
+.ftw{
+	font-weight: 600;
+}
+.ftw2{
+	font-weight: 300;
+}
+.pad{
+	padding: 15px 0 20px;
+	line-height: 1.4;
+}
+/*
+--------------------- Landing Formations Block End ---------------------- */
+
+
+
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
+@media screen and (max-width:960px) {
+	.landing-block, .landing-block::before{
+		height: 200px;
+	}
+}
+@media screen and (max-width:736px){
+	.sommaire__text{
+		padding-left: 5vw;
+	}
+	.content ul li{
+		padding-top: 0;
+	}
+	.content ul li span{
+		padding-left: 25px;
+		padding-right: 0;
+	}
+	.container h2{
+		font-size: 35px;
+	}
+	.invit{
+		padding-bottom: 4rem;
+	}
+	.invit cite{
+		font-size: 25px;
+	}
+	.invit h2{
+		font-size: 28px;
+	}
+}
+@media screen and (max-width:402px){
+	.landing-block h1{
+		padding: .5rem 0;
+		font-size: 23px;
+	}
+	.invit cite{
+		font-size: 22px;
+	}
+	.invit h2{
+		font-size: 25px;
+	}
+}
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/

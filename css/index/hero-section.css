@@ -1,0 +1,136 @@
+/* Hero-Section CSS Code */
+
+.hero-section {
+	height: 100vh;
+	width: 100%;
+	transition: all 1s ease-in-out;
+	opacity: 0;
+}
+.hero-section.overlay {
+	position: relative;
+}
+.hero-section.overlay::before {
+	content: "";
+    background: rgba(0, 0, 0, .15);
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hero-section.container {
+	position: relative;
+	z-index: 2;
+}
+.hero-section .container .hero-section-inner {
+	height: 100vh;
+}
+.hero-text {
+	width: 75%;
+	padding: 25px;
+	margin: 0 auto;
+	color: #fff;
+}
+.hero-text .hero-devise {
+	font-size: 60px;
+	opacity: 1;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-top: 190px;
+}
+.hero-text .hero-vision {
+	font-size: 50px;
+	opacity: 1;
+	font-weight: 300;
+	line-height: 1.2;
+	margin-top: 80px;
+}
+.hero-text a .hero-btn {
+	cursor: pointer;
+	font-weight: 400;
+	vertical-align: middle;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	border: 2px solid transparent;
+	background: rgb(219, 178, 81);
+	color: #fff;
+	border-radius: .25rem;
+	box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.2) ;
+	position: relative;
+	outline: none;
+	padding: 10px 10px;
+	margin: 110px auto 0 auto;
+	width: 175px;
+	height: 50px;
+	transition: all .3s;
+}
+.hero-text a .hero-btn:hover {
+	background: transparent;
+	border: 2px solid #fff;
+}
+
+
+
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
+@media all and (max-width:420px) {
+	.hero-text .hero-devise {
+		font-size: 35px;
+		margin-top: 75px;
+	}
+	.hero-text .hero-vision {
+		font-size: 25px;
+		margin-top: 60px;
+	}
+	.hero-text a .hero-btn {
+		margin-top: 65px;
+	}
+}
+@media all and (min-width:421px) and (max-width:588px) {
+	.hero-text .hero-devise {
+		font-size: 40px;
+		margin-top: 125px;
+	}
+	.hero-text .hero-vision {
+		font-size: 35px;
+	}
+}
+@media all and (max-height:500px) {
+	.hero-text a .hero-btn {
+		margin-top: 10px;
+	}
+}
+@media all and (max-height:475px) {
+	.hero-text .hero-vision {
+		margin-top: -10px;
+	}
+	.hero-text a .hero-btn {
+		margin-top: -25px;
+	}
+}
+@media all and (min-width:657px) and (max-width:834px) {
+	.hero-text .hero-devise {
+		font-size: 50px;
+		margin-top: 150px;
+	}
+	.hero-text .hero-vision {
+		font-size: 40px;
+	}
+	.hero-text a .hero-btn {
+		margin-top: 100px;
+	}
+}
+@media all and (max-height:550px) {
+	.hero-text a .hero-btn {
+		margin-top: 80px;
+	}
+}
+@media all and (min-width:589px) and (max-width:656px) {
+	.hero-text .hero-devise {
+		font-size: 40px;
+		margin-top: 145px;
+	}
+	.hero-text .hero-vision {
+		font-size: 35px;
+	}
+}
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/

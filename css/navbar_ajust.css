@@ -1,0 +1,14 @@
+.navbar{
+	height: 90px;
+	position: relative;
+	opacity: .875;
+}
+.navbar-logo{
+	height: 80px;
+}
+.nav-links{
+	margin: 25px 28px 0;
+}
+.fixed{
+	position: fixed;
+}

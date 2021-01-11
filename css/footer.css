@@ -1,0 +1,188 @@
+/* Footer CSS Code */
+
+.footer {
+	background: #3c3c3c;
+	color: #d3d3d3;
+	height: 400px;
+	position: relative;
+}
+.footer .footer-content {
+	height: 340px;
+	display: flex;
+}
+.footer .footer-content .footer-section {
+	flex: 1;
+	padding: 25px;
+}
+.footer .footer-content .left-about a img {
+	height: 96px;
+	border-radius: 50%;
+	margin: 0 99px;
+}
+.footer .footer-content .left-about p {
+	margin-top: 21px;
+	line-height: 1.7;
+}
+.footer .footer-content .left-about .social-links {
+	margin-top: 28px;
+	width: 13.2rem;
+}
+.footer .footer-content .left-about .social-links a {
+	border: 1px solid transparent;
+	width: 40px;
+	height: 40px;
+	padding-top: 5px;
+	margin-right: 5px;
+	text-align: center;
+	display: inline-block;
+	font-size: 1.3em;
+	border-radius: 50%;
+	transition: all .5s;
+	color: #e4e2e2;
+}
+.footer .footer-content .left-about .social-links a:nth-child(1):hover {
+	color: #006de6;
+}
+.footer .footer-content .left-about .social-links a:nth-child(2):hover {
+	color: #6ee777;
+}
+.footer .footer-content .left-about .social-links a:nth-child(3):hover {
+	color: #1da1f2;
+}
+
+.footer .footer-content .left-about .social-links a:nth-child(4):hover {
+	color: #0073b1;
+}
+.footer .footer-content .left-about .social-links a ion-icon {
+	width: 30px;
+	height: 25px;
+}
+.footer .footer-content .center-quick-links ul {
+	margin-top: 24px;
+}
+.footer .footer-content .center-quick-links ul a {
+	display: inline-block;
+	margin: 6px 0 10px 30px;
+	padding: 4px 0;
+	text-align: center;
+	border: 1px solid #818181;
+	border-radius: 1px;
+	color: #d3d3d3;
+	width: 104px;
+	height: 30px;
+	transition: all .5s;
+}
+.footer .footer-content .center-quick-links ul a:hover {
+	background-color: #1198d0;
+	border-color: #1198d0;
+	color: #fff;
+	transition: all .5s;
+	transform: scale(.95) translateY(-10px);
+}
+.content .place ion-icon, .content .phone ion-icon,
+.content .email a ion-icon, .content .timetable ion-icon{
+	display: table-cell;
+	vertical-align: top;
+	width: 20px;
+    font-size: 20px;
+	color: #1198d0;
+	cursor: pointer
+}
+.footer .footer-content .right-contact-information .content .informative-text {
+	display: table-cell;
+	vertical-align: top;
+	line-height: 1.5;
+	padding-left: 20px;
+}
+.footer .footer-content .right-contact-information .content .phone .informative-text a,
+.footer .footer-content .right-contact-information .content .email .informative-text {
+	color: #d3d3d3;
+}
+.footer .footer-content .right-contact-information .content .phone .informative-text a:hover,
+.footer .footer-content .right-contact-information .content .email .informative-text:hover {
+	text-decoration: underline;
+}
+.footer .footer-content .right-contact-information .content .place {
+	margin-top: 35px;
+}
+.footer .footer-content .right-contact-information .content .phone {
+	margin: 25px 0;
+}
+.footer .footer-content .right-contact-information .content .email {
+	margin-bottom: 25px;
+}
+.footer .footer-bottom {
+	background: #323232;
+	height: 60px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding-top: 20px;
+	font-size: 12px;
+}
+.footer .footer-bottom a {
+	color: #1da1f2;
+	transition: all .3s ease-in-out;
+}
+.footer .footer-bottom a:hover {
+	text-decoration: underline;
+	color: rgb(219, 178, 81);
+}
+.footer .footer-content .left-about p,
+.footer .footer-content .center-quick-links ul a,
+.footer .footer-content .right-contact-information .content .informative-text {
+	font-size: 14px;
+}
+.footer .footer-content .center-quick-links h2,
+.footer .footer-content .right-contact-information h2 {
+	text-transform: capitalize;
+	font-size: 20px;
+	font-weight: bold;
+}
+.footer .footer-content .center-quick-links h2::before,
+.footer .footer-content .right-contact-information h2::before{
+	content: "";
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 1px;
+	top: 35px;
+	background: #818181;
+}
+.footer .footer-content .center-quick-links h2::after,
+.footer .footer-content .right-contact-information h2::after{
+	content: "";
+	display: block;
+	position: relative;
+	width: 35%;
+	height: 1px;
+	top: 10px;
+	background: linear-gradient(to left, #38889e, #34bbe3, #469bac);
+}
+
+
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
+@media only screen and (max-width:934px) {
+	.footer{
+		height: auto;
+	}
+	.footer .footer-content {
+		height: auto;
+		flex-direction: column;
+	}
+	.footer .footer-content .left-about a img {
+		height: 96px;
+		margin: 0;
+	}
+	.footer .footer-content .right-contacts {
+		padding-bottom: 90px;
+	}
+}
+@media only screen and (min-width:935px) and (max-width:1031px) {
+	.footer .footer-content .center-quick-links ul {
+		margin: 0;
+	}
+}
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/

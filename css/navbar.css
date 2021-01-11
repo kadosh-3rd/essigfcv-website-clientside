@@ -1,0 +1,317 @@
+/* NavBar CSS Code */
+
+/* ---------------------- NavBar Start ---------------------- */
+.navbar{
+	background: var(--linearSkyBlue);
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .95rem;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	box-shadow: var(--shadowcolor) 2px 2px 10px;
+	transition-duration: .7s;
+	width: 100%;
+}
+.navbar .school_name{
+	transition: transform 2.5s ease-out, opacity 2.5s ease-out;
+	text-align: center;
+	color: inherit;
+}
+.navbar-logo{
+	justify-self: start;
+	margin-left: 20px;
+	cursor: pointer;
+	transition-duration: .7s;
+	z-index: 3;
+}
+.navbar-logo img{
+	border-radius: 50%;
+	height: inherit;
+}
+.menu-btn {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	margin-right: 20px;
+	width: 35px;
+	height: 35px;
+	bottom: -2px;
+	cursor: pointer;
+	transition: all .5s ease-in-out;
+	display: none;
+}
+.menu-btn__burger {
+	width: 25px;
+	height: 3px;
+	background: var(--pureWhite);
+	border-radius: 5px;
+	box-shadow: 0 2px 5px var(--shadowBrownBtn);
+	transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 3px;
+	background: var(--pureWhite);
+	border-radius: 5px;
+	box-shadow: 0 2px 5px var(--shadowBrownBtn);
+	transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+	transform: translateY(-8px);
+}
+.menu-btn__burger::after {
+	transform: translateY(8px);
+}
+.menu-btn.opened {
+	border: 2px solid var(--pureWhite);
+	border-radius: 50%;
+}
+.menu-btn.opened .menu-btn__burger {
+	transform: translateX(-50px);
+	background: transparent;
+	box-shadow: none;
+}
+.menu-btn.opened .menu-btn__burger::before {
+	transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.opened .menu-btn__burger::after {
+	transform: rotate(-45deg) translate(35px, 35px);
+}
+.nav-menu{
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	gap: 10px;
+	text-align: center;
+	width: 70vw;
+	justify-content: end;
+}
+.nav-links{
+	height: 60px;
+	padding-top: 20px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all .2s ease-out;
+}
+.nav-links::after {
+	content: "";
+	display: block;
+	position: relative;
+	top: 8px;
+	width: inherit;
+	height: 2px;
+	background: var(--pureWhite);
+	opacity: .75;
+	transform: scale(0);
+	transition: transform .2s ease-in-out;
+}
+.nav-links:hover::after{
+	transform: scale(1);
+}
+.nav-links a, .nav-links span, .navbar .school_name{
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	cursor: pointer;
+	background-image: var(--linearWhite);
+}
+.nav-links span .chevron{
+	position: relative;
+	float: right;
+	top: 4px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	border-top: 2px solid #333;
+	border-right: 2px solid #333;
+	opacity: .75;
+	transform: rotate(45deg);
+	transition: top .3s ease-in, transform .5s ease-in-out;
+}
+.nav-links:first-child a,
+.nav-links:last-child a,
+.nav-links span {
+	text-transform: uppercase;
+}
+.nav-links ul{
+	text-align: left;
+	padding: 0 35px;
+	font-size: 16px;
+	font-weight: 500;
+	position: absolute;
+	line-height: 55px;
+	margin-top: 22px;
+	max-width: 280px;
+	min-width: 280px;
+	background-color: var(--yellowBrown);
+	border-radius: 2px;
+}
+.nav-links:hover ul {
+	animation: subMenuAppearing .5s cubic-bezier(.455, .03, .515, .955);
+	box-shadow: 6px 6px 15px 4px var(--shadowNuance);
+}
+.nav-links:hover .subNav-links {
+	display: block;
+}
+.nav-links:hover span .chevron {
+	top: 2px;
+	transform: rotate(135deg);
+	transition: top .3s ease-in, transform .5s ease-in-out;
+}
+.subNav-links {
+	height: 50px;
+	margin: 8px 0;
+	display: none;
+}
+.nav-links:nth-child(2) .subNav-links:first-child::after,
+.nav-links:nth-child(3) .subNav-links:first-child::after,
+.nav-links:nth-child(3) .subNav-links:nth-child(2)::after,
+.nav-links:nth-child(4) .subNav-links:first-child::after{
+	content: "";
+	width: inherit;
+	height: 1px;
+	background: var(--softBlack);
+	display: block;
+	position: relative;
+}
+.subNav-links:hover {
+	transform: scale(1.03);
+}
+/* ---------------------- NavBar End ---------------------- */
+
+
+
+/* ---------------------- Animations classes and methods Start ---------------------- */
+.navbar.sticky{
+	height: 90px;
+	opacity: 1;
+}
+.navbar.sticky .school_name{
+	transform: translateX(5.876%);
+	opacity: 0;
+}
+.navbar.sticky .navbar-logo{
+	height: 80px;
+	position: absolute;
+	left: 15%;
+	margin-left: -75px;
+}
+@keyframes subMenuAppearing {
+	from {
+		opacity: 0;
+		transform: translate3d(2%, -10%, 0);
+	}
+	to {
+		opacity: .7;
+		transform: translate(0);
+	}
+}
+/* ---------------------- Animations classes and methods End ---------------------- */
+
+
+
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
+@media screen and (max-width:1045px){
+	.navbar{
+		height: 90px;
+		opacity: 1;
+	}
+	.navbar .school_name{
+		transform: translateY(12%);
+	}
+	.nav-menu{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		top: 89px;
+		left: -100%;
+		opacity: 1;
+		transition: all .5s ease;
+	}
+	.nav-menu.active{
+		background: var(--blueDarkerMenu);
+		left: 0;
+		opacity: 1;
+		transition: all .5s ease;
+		z-index: 1;
+		overflow: auto;
+	}
+	.nav-links{
+		text-align: center;
+		padding: 2rem;
+		width: 100%;
+		display: table;
+		margin: 0;
+	}
+	.nav-links::after {
+		width: calc(100% - 40rem);
+		margin: 0 auto;
+	}
+	.nav-links:hover{
+		background: var(--hightLightingBlue);
+	}
+	.nav-links span .chevron{
+		display: none;
+	}
+	.nav-links ul{
+		left: calc(100% - 285px);
+	}
+	.navbar-logo{
+		position: absolute;
+		left: 0;
+		height: 75px;
+		transform: translateX(50%);
+	}
+	.menu-btn{
+		display: inline-flex;
+		position: absolute;
+		right: 0;
+		transform: translate(-100%, -80%);
+	}
+
+	@keyframes subMenuAppearing {
+		from {
+			opacity: 0;
+			transform: translate(-2.5%, 10%);
+		}
+		to {
+			opacity: .7;
+			transform: translate(0);
+		}
+	}
+}
+@media screen and (max-width:578px){
+	.navbar-logo{
+		transform: translateX(10%);
+	}
+	.menu-btn{
+		transform: translate(-20%, -80%);
+	}
+}
+@media screen and (max-width:476px){
+	.navbar{
+		height: 70px;
+	}
+	.navbar .school_name{
+		transform: translate(4%, 10%);
+	}
+	.navbar-logo{
+		height: 60px;
+		transform: translateX(-20%);
+	}
+	.menu-btn{
+		transform: translateY(-65%);
+	}
+	.nav-menu{
+		top: 70px;
+	}
+}
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/

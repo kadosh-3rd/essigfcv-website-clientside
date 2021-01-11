@@ -1,0 +1,319 @@
+@import '../reset.css';
+@import '../navbar_ajust.css';
+@import '../navbar.css';
+@import '../scrollingUp.css';
+@import '../footer.css';
+
+/* About Section CSS Code */
+
+/* ---------------------- Landing About Block Start ---------------------- */
+.about-section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.block-background{
+	background: url("../../img/school-pic2.jpg") #b2ddf8 no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	/* background-position: 50% 52%; */
+}
+.block-fondu{
+	position: relative;
+	width: 40%;
+	background: #fff;
+	box-shadow: 92px 0 100px 100px #fff;
+}
+.block-fondu h1{
+	text-align: center;
+	font-size: 40px;
+	color: #34bbe3;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 4rem 0 50px;
+	margin-left: 10vw;
+}
+.block-fondu h1::after{
+	content: "";
+	display: block;
+	position: relative;
+	top: 8px;
+	height: 2px;
+	width: 80px;
+	margin: 0 auto;
+	background: rgb(219, 178, 81);
+}
+.block-fondu p{
+	text-align: start;
+	margin-left: 10vw;
+	font-weight: 300;
+	line-height: 1.8;
+}
+.block-fondu h1, .block-fondu p{
+	animation: fadeInUp 2s both cubic-bezier(0.68,-0.07, 0.18, 1.17);
+}
+/* ---------------------- Landing About Block End ---------------------- */
+
+
+
+/* ---------------------- Schools Block Start ---------------------- */
+.schools-block{
+	padding: 30px 25px 50px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translate3d(0, 50px, 0);
+	transition: all 2s cubic-bezier(0.4, 0, 0.62, 1.41);
+}
+.schools-block h1{
+	text-align: center;
+	font-size: 40px;
+	color: #34bbe3;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 5rem 0 50px;
+}
+.schools-block h1::after{
+	content: "";
+	display: block;
+	position: relative;
+	width: 80px;
+	height: 2px;
+	top: 8px;
+	margin: 0 auto;
+	background: rgb(219, 178, 81);
+}
+.schools-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.school-box{
+	flex: 50%;
+	max-width: 100%;
+}
+.school-description__block{
+	background: inherit;
+	height: 100%;
+	padding: 25px;
+	transition: all .5s ease-in-out;
+}
+.school-description__block h2{
+	font-size: 30px;
+	color: #34bbe3;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 3rem 0 20px;
+}
+.school-description__block p{
+	text-align: justify;
+	font-weight: 300;
+	line-height: 1.8;
+}
+.usia__img img, .cfpa__img img{
+	width: 100%;
+	height: 100%;
+}
+/* ---------------------- Schools Block End ---------------------- */
+
+
+
+/* ---------------------- Admission Block Start ---------------------- */
+.admission-section{
+	padding: 15px 40px 50px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translate3d(0, 50px, 0);
+	transition: all 2s cubic-bezier(0.4, 0, 0.62, 1.41);
+	background: #eeeae7;
+	color: #434343;
+}
+.admission-section h1{
+	text-align: center;
+	font-size: 40px;
+	color: #1a9fe2;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 3rem 0 28px;
+}
+.admission-section h1::after{
+	content: "";
+	display: block;
+	position: relative;
+	width: 80px;
+	height: 2px;
+	top: 8px;
+	margin: 0 auto;
+	background: rgb(219, 178, 81);
+}
+.admission-section h2{
+	font-size: 30px;
+	color: #1a9fe2;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 0 0 20px;
+}
+.admission-section h2::before{
+	content: "";
+	display: block;
+	position: relative;
+	width: 38%;
+	height: 1px;
+	top: 38px;
+	background: #b6b5b5;
+}
+.admission-section h2::after{
+	content: "";
+	display: block;
+	position: relative;
+	width: 18%;
+	height: 1px;
+	top: 1px;
+	background: linear-gradient(to left, #38889e, #34bbe3, #469bac);
+}
+.admission__per-school{
+	padding: 20px 0;
+}
+.admission-info__container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.admission-box{
+	flex: 50%;
+	max-width: 100%;
+}
+.admission-box:first-child, .admission-box:nth-child(3){
+	padding-left: 20px;
+}
+.papers h3, .prices h3{
+	font-size: 22.5px;
+	line-height: 1.2;
+	padding: 10px 0 20px;
+}
+.papers ul{
+	padding: 0 50px 10px;
+}
+.papers li{
+	line-height: 1.5;
+	list-style-type: disc;
+	padding: 10px 0;
+}
+.prices h3{
+	color: hsl(9, 82%, 53%);
+}
+.prices__container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.prices_box{
+	flex: 45%;
+	max-width: 95%;
+	background: hsl(192, 78%, 71%);
+	border-radius: .25rem;
+	margin: 15px;
+	cursor: not-allowed;
+	transition: all .5s ease-in-out;
+}
+.prices_box:hover{
+	box-shadow: rgba(15, 31, 53, .2) 8px 6px 18px 7px;
+	-webkit-box-shadow: rgba(15, 31, 53, .2) 8px 6px 18px 7px;
+}
+.prices_box h4{
+	text-align: center;
+	padding: 20px 0;
+	font-weight: 900;
+}
+.prices_box ul{
+	padding: 0 5px 10px 40px;
+	font-weight: 500;
+	/* border-top: 1px solid #434343; */
+}
+.prices_box li{
+	line-height: 1.5;
+	list-style-type: square;
+	padding: 10px 0;
+}
+.usia_school .prices .prices__container .prices_box ul li:nth-child(5),
+.usia_school .prices .prices__container .prices_box:nth-child(3) ul li:nth-child(4),
+.usia_school .prices .prices__container .prices_box:last-child ul li:nth-child(4),
+.cfpa_school .prices .prices__container .prices_box ul li:nth-child(4){
+	font-weight: 800;
+	color: hsl(9, 82%, 53%);
+}
+/* ---------------------- Admission Block End ---------------------- */
+
+
+
+/* ---------------------- Animations classes and methods Start ---------------------- */
+.block-reveal {
+	opacity: 1;
+	transform: none;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 55px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+/* ---------------------- Animations classes and methods End ---------------------- */
+
+
+
+
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
+@media screen and (min-width:960px) and (max-width: 1235px){
+	.usia__img img, .cfpa__img img{
+		object-fit: scale-down;
+	}
+}
+
+@media screen and (max-width:960px) {
+	.school-box{
+		flex: 100%;
+		max-width: 80%;
+	}
+	.school-description__block h2{
+		padding-top: .25rem;
+	}
+	.usia__img{
+		order: 1;
+		padding-top: 16px;
+	}
+	.usia{
+		order: 2;
+	}
+	.cfpa__img{
+		order: 3;
+		padding-top: 75px;
+	}
+	.cfpa{
+		order: 4;
+	}
+	.usia__img img, .cfpa__img img{
+		border-radius: .2rem;
+		object-fit: cover;
+	}
+}
+@media screen and (max-width:600px) {
+	.schools-block{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.school-box{
+		flex: 100%;
+		max-width: 100%;
+	}
+	.admission-section h1{
+		padding-top: 1rem;
+	}
+}
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/

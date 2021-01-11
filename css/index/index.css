@@ -1,0 +1,10 @@
+@import '../reset.css';
+@import '../loader.css';
+@import './navbar_index-ajust.css';
+@import '../navbar.css';
+@import './hero-section.css';
+@import './welcome-section.css';
+@import './news-section.css';
+@import '../footer.css';
+@import '../scrollingUp.css';
+@import './specific-classes.css';

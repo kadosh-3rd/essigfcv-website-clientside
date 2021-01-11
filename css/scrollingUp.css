@@ -1,0 +1,30 @@
+/* Scrolling To Top CSS Code */
+
+.scrollingUp {
+	height: 45px;
+	width: 45px;
+	background: var(--lightingGreen);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 8;
+	right: 15px;
+	bottom: 15px;
+	cursor: pointer;
+	visibility: hidden;
+	transition: all .15s ease-in-out;
+}
+.scrollingUp:active{
+	transform: scale(.92);
+}
+.scrolling-btn {
+	width: 20px;
+}
+
+@media only screen and (max-width:736px){
+	.scrolling-btn {
+		width: 24px;
+	}
+}

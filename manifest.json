@@ -1,0 +1,15 @@
+{
+	"short_name": "ESSIG FCV",
+	"name": "ESSIG Fcv PWA",
+	"icons": [
+		{
+			"src": "img/groupe-essig.png",
+			"sizes": "600x600",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000",
+	"background_color": "#fff"
+}

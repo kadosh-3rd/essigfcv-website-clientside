@@ -1,0 +1,198 @@
+@import '../reset.css';
+@import '../footer.css';
+
+/* Contact-Section CSS Code */
+
+.contact{
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url("../../img/thought-catalog-UK78i6vK3sc-unsplash.jpg") #094657 no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.contact .content{
+	max-width: 800px;
+	text-align: center;
+	background: #00bcd4;
+	border-radius: .25rem;
+	padding: 5px 10px 15px;
+	animation: fadeInUp 2s both;
+}
+.contact .content h1 {
+	font-size: 36px;
+	font-weight: 600;
+	color: #f7f7f7;
+}
+.contact .content p {
+	margin-top: 5px;
+	font-weight: 300;
+	color: #fff;
+}
+.container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 35px;
+	animation: fadeInUp 2s both;
+}
+.container .contactInfo{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.container .contactInfo .box{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+.container .contactInfo .box .icon{
+	min-width: 50px;
+	height: 50px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+.container .contactInfo .box .text{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+	flex-direction: column;
+	font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+	font-weight: 500;
+	color: #00bcd4;
+}
+.contactForm{
+	width: 40%;
+	padding: 40px;
+	background: #fff;
+	border-radius: 5px;
+}
+.contactForm h2{
+	font-size: 30px;
+	color: #f7f7f7;
+	font-weight: 500;
+	padding: 5px 0;
+	margin-bottom: 25px;
+	background: #00bcd4;
+	border-radius: .25rem;
+	text-align: center;
+}
+.contactForm .inputBox{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 12.75px 0;
+	border: none;
+	border-bottom: 1px solid #333;
+	outline: none;
+	resize: none;
+}
+.contactForm .inputBox span{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: all .5s;
+	color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+	color: #00bcd4;
+	font-size: 12px;
+	transform: translate3d(0, -20px, 0);
+}
+.contactForm .inputBox input[type="submit"]{
+	width: 100px;
+	background: #00bcd4;
+	color: #fff;
+	border: none;
+	/* cursor: not-allowed; */
+	padding: 10px;
+	font-size: 18px;
+	outline: none;
+	border-radius: .25rem;
+	transition: all .5s;
+}
+/* .contactForm .inputBox input:valid ~ input[type="submit"],
+.contactForm .inputBox textarea:valid ~ input[type="submit"]{
+	cursor: pointer;
+} 
+
+Essayer de gérer ça via du JS   */
+.contactForm .inputBox input[type="submit"]:hover{
+	background: #099db1;
+}
+.contactForm .inputBox input[type="submit"]:active{
+	transform: scale(.9);
+	transition: all .5s;
+}
+.contactForm form .status-message{
+	position: relative;
+	float: right;
+	bottom: 45px;
+	right: 5%;
+	font-size: 15px;
+}
+
+
+/*---------------------------------------- KEYFRAMES ----------------------------------------*/
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+/*---------------------------------------- KEYFRAMES ----------------------------------------*/
+
+
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
+@media (max-width:991px){
+	.contact{
+		padding: 50px;
+	}
+	.container{
+		flex-direction: column;
+	}
+	.container .contactInfo{
+		margin-bottom: 40px;
+	}
+	.container .contactInfo, .contactForm{
+		width: 100%;
+	}
+}
+@media (max-width:558px){
+	.contactForm form .status-message{
+		position: relative;
+		float: left;
+		bottom: 0;
+		right: 0;
+		margin-top: 5px;
+	}
+}
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
