@@ -131,7 +131,7 @@ failureIcon.classList.add('failure-icon');
 			postSection.append(postItem);
 		});
 
-		console.log(postData);
+		console.table(postData);
 
 	} catch (err) {
 		console.error(err);
